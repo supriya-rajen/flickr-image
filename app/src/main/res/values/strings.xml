@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ProgrammingTask</string>
+    <string name="title">Flickr Photos</string>
+    <string name="save">Save</string>
+    <string name="confirm">Confirm</string>
+    <string name="want_to_save">Do you want to save this image ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
