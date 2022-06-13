@@ -25,7 +25,7 @@ fun NavigatePage(
 
         //  home screen with grid image listing
         composable(route = Destination.Home.route) {
-            PhotoGridCompose(gridViewModel, itemClick = {route ->
+            ImageGridScreen(gridViewModel, itemClick = { route ->
                 navHostController.navigate(route)
             })
         }
@@ -47,7 +47,7 @@ fun NavigatePage(
 
         // list view screen with pagination when the load more item is tapped
         composable(route = Destination.List.route) {
-            PhotoListCompose(listViewModel.user, itemClick = {route ->
+            ImageListScreen(listViewModel.user, itemClick = { route ->
                 navHostController.navigate(route)
             })
         }

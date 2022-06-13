@@ -42,7 +42,7 @@ import java.nio.charset.StandardCharsets
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun PhotoListCompose(imageList: Flow<PagingData<ImageData>>,itemClick : (String) -> Unit) {
+fun ImageListScreen(imageList: Flow<PagingData<ImageData>>, itemClick : (String) -> Unit) {
 
     val userListItems: LazyPagingItems<ImageData> = imageList.collectAsLazyPagingItems()
 

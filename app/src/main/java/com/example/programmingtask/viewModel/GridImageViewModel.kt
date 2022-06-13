@@ -19,6 +19,7 @@ class GridImageViewModel : ViewModel() {
 
     private fun getImageList(){
         // using coroutine doing api call
+
         viewModelScope.launch(IO){
             val searchResponse = WebClient.client.fetchImages(method = "flickr.photos.search",
                 format ="json", nojsoncallback = 1,

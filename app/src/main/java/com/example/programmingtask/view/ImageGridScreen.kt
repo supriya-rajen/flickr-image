@@ -37,8 +37,8 @@ import java.nio.charset.StandardCharsets
 @SuppressLint("UnrememberedMutableState")
 @ExperimentalFoundationApi
 @Composable
-fun  PhotoGridCompose(
-    photosViewModel: GridImageViewModel,itemClick: (String) -> Unit){
+fun  ImageGridScreen(
+    imageViewModel: GridImageViewModel, itemClick: (String) -> Unit){
 
     var imageData: List<ImageData>
 
@@ -51,7 +51,7 @@ fun  PhotoGridCompose(
 
         SearchView(state = textState)
 
-        if (!photosViewModel.isSuccessLoading.value) {
+        if (!imageViewModel.isSuccessLoading.value) {
             CircularProgressIndicator(
                 modifier = Modifier
                     .fillMaxSize()
@@ -63,7 +63,7 @@ fun  PhotoGridCompose(
                 cells = GridCells.Fixed(3),
                 modifier = Modifier
                     .padding(10.dp)) {
-                imageData = photosViewModel.imageDataList as MutableList<ImageData>
+                imageData = imageViewModel.imageDataList as MutableList<ImageData>
                 items(imageData) { data ->
                     ImageDataGridItem(data.url.isEmpty(),data) {
                         if(data.url.isNotEmpty()){
