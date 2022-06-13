@@ -13,7 +13,6 @@ import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
@@ -44,7 +43,7 @@ fun  PhotoGridCompose(
     var imageData: List<ImageData>
 
     Column(modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment = CenterHorizontally,
         verticalArrangement = Arrangement.Top)
     {
       TopHeaderBar(LocalContext.current,false,""  )
@@ -64,7 +63,7 @@ fun  PhotoGridCompose(
                 cells = GridCells.Fixed(3),
                 modifier = Modifier
                     .padding(10.dp)) {
-                imageData = photosViewModel.photosList as MutableList<ImageData>
+                imageData = photosViewModel.imageDataList as MutableList<ImageData>
                 items(imageData) { data ->
                     ImageDataGridItem(data.url.isEmpty(),data) {
                         if(data.url.isNotEmpty()){
