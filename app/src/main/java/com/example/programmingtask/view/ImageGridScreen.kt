@@ -102,15 +102,7 @@ fun ImageDataGridItem(isLastItem : Boolean,data: ImageData,itemClick: () -> Unit
                     .clip(RoundedCornerShape(10.dp)), alignment = Alignment.Center
             )
         }else{
-//            val image = loadPicture(url = data.url, defaultImage = DEFAULT_RECIPE_IMAGE).value
-//            AsyncImage(
-//                model = ImageRequest.Builder(LocalContext.current)
-//                    .data(image)
-//                    .crossfade(true)
-//                    .build(),
-//                contentDescription = "Photo",
-//                contentScale = ContentScale.Crop,
-//            )
+
             GlideImage(
                 imageModel = data.url,
                 // Crop, Fit, Inside, FillHeight, FillWidth, None
