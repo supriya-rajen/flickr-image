@@ -21,7 +21,7 @@ class ListSourcePagination : PagingSource<Int, ImageData>() {
         return try {
             val nextPage = params.key ?: 1
             delay(500)
-            val userList = WebClient.client.fetchImages(method = "flickr.photos.search", format ="json", nojsoncallback = 1, text = "electrolux",
+            val userList = WebClient.client.fetchImages(method = "flickr.photos.search", format ="json", nojsoncallback = 1, text = "sweden",
                 page = nextPage, per_page = 20, api_key = API_KEY)
 
             LoadResult.Page(

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProgrammingTask</string>
+    <string name="app_name">FLickrImage</string>
     <string name="title">Flickr Photos</string>
     <string name="save">Save</string>
     <string name="confirm">Confirm</string>

@@ -47,7 +47,7 @@ fun  ImageGridScreen(
         verticalArrangement = Arrangement.Top)
     {
       TopHeaderBar(LocalContext.current,false,""  )
-        val textState =  mutableStateOf(TextFieldValue("Electrolux"))
+        val textState =  mutableStateOf(TextFieldValue("Sweden"))
 
         SearchView(state = textState)
 
